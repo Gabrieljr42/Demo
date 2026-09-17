@@ -67,6 +67,18 @@ describe("demo scripted paths", () => {
     assert.match(res.reply.toLowerCase(), /equipe|recepção|recepcao/);
   });
 
+  it("saudação curta: 'Oi' não repete o pitch completo de recepcionista", () => {
+    const res = scriptedReply({
+      text: "Oi",
+      state: initialState(),
+      now: NOW,
+    });
+    assert.equal(res.state.lastIntent, "greeting");
+    assert.doesNotMatch(res.reply.toLowerCase(), /recepcionista/);
+    assert.match(res.reply.toLowerCase(), /oi/);
+    assert.match(res.reply.toLowerCase(), /horário|horario|agendamento|avalia/);
+  });
+
   it("urgência: dor forte — sem diagnóstico, com pronto-socorro e telefone", () => {
     const res = scriptedReply({
       text: "Estou com dor forte agora.",
