@@ -1,0 +1,107 @@
+{
+  "id": "clinica-sorriso",
+  "name": "Clínica Sorriso",
+  "city": "Belo Horizonte",
+  "state": "MG",
+  "persona": {
+    "name": "Clara",
+    "role": "recepcionista virtual",
+    "tone": "educada, objetiva, calorosa, sem gíria excessiva"
+  },
+  "contact": {
+    "phone": "(31) 3333-2200",
+    "urgencyPhone": "(31) 98888-2200",
+    "email": "contato@clinicasorriso.demo",
+    "whatsappBusinessLater": true
+  },
+  "address": {
+    "street": "Rua das Acácias, 450",
+    "neighborhood": "Savassi",
+    "city": "Belo Horizonte",
+    "state": "MG",
+    "zip": "30140-120",
+    "parking": "Estacionamento conveniado no edifício ao lado (2 horas grátis para pacientes; valide o ticket na recepção).",
+    "access": "Térreo acessível. Próximo à Praça da Liberdade."
+  },
+  "hours": {
+    "timezone": "America/Sao_Paulo",
+    "weekdays": { "days": [1, 2, 3, 4, 5], "start": "08:00", "end": "18:00" },
+    "saturday": { "days": [6], "start": "08:00", "end": "12:00" },
+    "sundayClosed": true,
+    "notes": "Horários sujeitos a encaixe. Confirmação final na recepção."
+  },
+  "insurance": {
+    "private": true,
+    "plans": ["Unimed", "Amil Dental", "Bradesco Dental"],
+    "notes": "Cobertura e coparticipação variam. A recepção confirma o convênio na hora do agendamento."
+  },
+  "firstVisit": {
+    "bring": [
+      "documento com foto",
+      "carteirinha do convênio (se for o caso)",
+      "exames ou radiografias recentes, se tiver"
+    ],
+    "arriveMinutesEarly": 10
+  },
+  "cancelPolicy": "Para remarcar ou cancelar, avise com pelo menos 24 horas. Pelo WhatsApp ou pelo telefone (31) 3333-2200.",
+  "services": [
+    {
+      "id": "avaliacao",
+      "name": "Avaliação odontológica",
+      "keywords": ["avaliacao", "avaliação", "consulta", "primeira consulta", "avaliar"],
+      "description": "Consulta inicial para examinar a boca, ouvir a queixa e montar o plano de tratamento.",
+      "durationMinutes": 40,
+      "canDisclosePrice": true,
+      "priceLabel": "R$ 120"
+    },
+    {
+      "id": "limpeza",
+      "name": "Limpeza (profilaxia)",
+      "keywords": ["limpeza", "profilaxia", "raspagem leve", "higiene"],
+      "description": "Limpeza profissional para remover tártaro e placa.",
+      "durationMinutes": 50,
+      "canDisclosePrice": true,
+      "priceLabel": "R$ 220"
+    },
+    {
+      "id": "clareamento",
+      "name": "Clareamento dental",
+      "keywords": ["clareamento", "clarear", "dentes brancos"],
+      "description": "Clareamento em consultório após avaliação. Indicação depende do exame.",
+      "durationMinutes": 60,
+      "canDisclosePrice": false,
+      "priceLabel": null
+    },
+    {
+      "id": "restauracao",
+      "name": "Restauração",
+      "keywords": ["restauracao", "restauração", "obturação", "obturacao", "cárie", "carie"],
+      "description": "Restauração de dente com cárie ou fratura pequena, após avaliação.",
+      "durationMinutes": 50,
+      "canDisclosePrice": false,
+      "priceLabel": null
+    }
+  ],
+  "unauthorizedTopics": [
+    "implante",
+    "sedação",
+    "sedacao",
+    "parcelamento em cheque",
+    "24x",
+    "cirurgia complexa",
+    "preço de tratamento que não está na base"
+  ],
+  "slotTemplate": {
+    "weekdayTimes": ["09:00", "10:30", "14:30", "16:00"],
+    "saturdayTimes": ["09:00", "10:30"],
+    "offerCount": 3
+  },
+  "safety": {
+    "neverInventPrices": true,
+    "neverDiagnose": true,
+    "unknownPolicy": "Se a informação não estiver nesta base, diga que não sabe e ofereça recado ou retorno humano. Nunca chute preço, condição de pagamento ou indicação clínica.",
+    "urgencyPolicy": "Dor forte, trauma, sangramento que não para, inchaço importante ou febre: orientar procurar pronto-socorro / PA odontológico, informar o telefone de urgência da clínica, oferecer encaixe. Não diagnosticar.",
+    "handoffPhrase": "Essa parte a equipe confirma com calma — eu não invento valor nem condição que não esteja na nossa base."
+  },
+  "lgpdNote": "Esta conversa é uma demonstração e pode ser processada por IA. Não envie dados sensíveis reais."
+}
