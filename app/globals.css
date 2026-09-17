@@ -215,28 +215,25 @@ a { color: inherit; }
 
 .chips {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
-  overflow-x: auto;
   padding: 8px 10px 4px;
-  scrollbar-width: none;
 }
 
-.chips::-webkit-scrollbar { display: none; }
-
 .chip {
-  flex: 0 0 auto;
+  flex: 0 1 auto;
   border: 0;
   background: #fff;
   color: #027a69;
   border-radius: 18px;
   padding: 8px 12px;
   font-size: 13px;
+  line-height: 1.3;
   box-shadow: 0 1px 2px rgba(0,0,0,.12);
   cursor: pointer;
-  max-width: 280px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  max-width: 100%;
+  white-space: normal;
+  text-align: left;
 }
 
 .chip:hover { background: #f0fdf9; }
@@ -289,15 +286,20 @@ a { color: inherit; }
 .toast {
   position: absolute;
   left: 50%;
-  bottom: 88px;
+  top: 70px;
   transform: translateX(-50%);
   background: #111b21;
   color: #fff;
   padding: 8px 12px;
   border-radius: 8px;
   font-size: 13px;
+  line-height: 1.35;
   z-index: 5;
-  white-space: nowrap;
+  max-width: calc(100% - 24px);
+  text-align: center;
+  white-space: normal;
+  pointer-events: none;
+  box-shadow: 0 8px 20px rgba(0,0,0,.28);
 }
 
 .staff-page {
