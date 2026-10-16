@@ -462,7 +462,7 @@ export function scriptedReply(input: {
 
   if (isGreeting(n) || n.length < 4) {
     return finish(
-      `Olá! Eu sou a ${clinic.persona.name}, ${clinic.persona.role} da ${clinic.name} 😊\nPosso falar de horários, serviços autorizados e te ajudar a agendar.\nComo posso te atender?`,
+      `Oi! Pode mandar horário, avaliação/limpeza (só o preço autorizado) ou agendamento — o que você precisa?`,
       { ...state, lastIntent: "greeting" },
       ["Oi, vocês atendem amanhã?", "Quanto fica uma avaliação / limpeza?", "Quero agendar"],
     );

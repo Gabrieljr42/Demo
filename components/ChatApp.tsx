@@ -204,7 +204,11 @@ export default function ChatApp() {
         <div className="lgpd">
           Demo: conversas podem ser processadas por IA. Não envie dados sensíveis reais.
         </div>
-        {toast ? <div className="toast">{toast}</div> : null}
+        {toast ? (
+          <div className="toast" role="status" aria-live="polite">
+            {toast}
+          </div>
+        ) : null}
       </div>
     </div>
   );
